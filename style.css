@@ -22,7 +22,7 @@ body {
     transition: .3s linear;
 }
 
-/* nav bgc changes when scrolling, look at js script */
+/* nav bgc appears when scrolling, look at js script */
 .nav__bgc--active {
     background-color: #fff;
     border-bottom: solid rgb(209, 209, 209) 1px;
@@ -31,6 +31,7 @@ body {
 .header__logo {
     display: none;
     color: tomato;
+    cursor: pointer;
 }
 
 .header__list {
@@ -72,7 +73,7 @@ body {
 /* Header +++++++++++++++++++++++++++++++******************************* */
 .header {
     height: 100vh;
-    background: url(img/dan-otis-335622-unsplash.png) no-repeat;
+    background: url(img/joel-filipe-4NZlogMPIp0-unsplash.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: top;
@@ -88,7 +89,7 @@ body {
 }
 
 .heading-main {
-    margin-bottom: 1.8rem;
+    margin-bottom: 2rem;
     color: tomato;
     font-weight: 700;
     text-transform: uppercase;
@@ -99,6 +100,7 @@ body {
     font-weight: 500;
     font-size: 1.5rem;
     color: white;
+    text-shadow: 2px 2px rgb(116, 115, 115);
     animation: headingSub 1s 1.2s ease both;
 }
 
@@ -110,8 +112,10 @@ body {
     border: 2px solid;
     border-radius: 5px;
     padding: .5rem 1.5rem;
+    box-shadow: 1px 1px rgb(138, 137, 137);
     text-decoration: none;
     color: white;
+    text-shadow: 1px 1px rgb(138, 137, 137);
     cursor: pointer;
     animation: headingMail 2s 2s ease both;
     transition: .3s;
@@ -119,7 +123,9 @@ body {
 
 .mail--link:hover {
     color: tomato;
+    text-shadow: none;
     border: 2px solid tomato;
+    box-shadow: none;
 }
 
 /* main +++++++++++++++++++++++++++++++******************************* */
@@ -463,6 +469,48 @@ form {
         font-size: 1.3rem;
         ;
     }
+
+    /* return to the top arrow  */
+    .circle {
+        position: fixed;
+        right: 2vw;
+        bottom: 2vw;
+        height: 50px;
+        width: 50px;
+        background-color: rgba(59, 63, 88, 0.555);
+        border: 2px solid white;
+        border-radius: 50%;
+        z-index: 9999 !Important;
+        transition: .3s linear;
+        opacity: 0;
+    }
+
+    .arrow {
+        position: absolute;
+        border-bottom: 20px solid white;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s linear;
+    }
+
+    .circle:hover {
+        cursor: pointer;
+        border: 2px solid tomato;
+        background-color: transparent;
+    }
+
+    .circle:hover .arrow {
+        border-bottom: 20px solid tomato;
+    }
+
+    .active {
+        opacity: 1;
+    }
+
+    /* arrow up end */
 
     /* header */
 
