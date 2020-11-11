@@ -2,7 +2,7 @@
 
 // set email address
 $email = $_POST['email'];
-$adminemail = "admin@stanbratuszewski.com";
+$adminemail = "brat.bogdan.stan@gmail.com";
 
 // set mail headers
 $headers = "From: " . $email . "\r\n";
@@ -14,8 +14,9 @@ $headers .= "Content-type: text/html; charset=iso-8859-1";
 $subject = "Stan Bratuszewski Web Design";
 
 // set visitor email message
-$body = "<p>Thank you for contacting me!<br>";
-$body .= "Your message has been delivered to my inbox and it will be read soon.</p>";
+$body = "<p>Thank's for contacting me!<br>";
+$body .= "Your message has been delivered and it will be read soon.</p><br><br>";
+$body .="<a href='http://stanbratuszewski.org/index.html' target='_blank'>Visit my Web site!</a>";
 
 // set email message
 $adminbody = "<strong>Name: </strong>" . $_POST['name'] . "<br>";
